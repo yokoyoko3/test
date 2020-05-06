@@ -6,10 +6,8 @@
   @foreach($memos as $memo)
   <div>
     <span> {{ $memo->content }} </span>
-  </div>
-
-  <div>
-{{-- <a href="{{ route('edit', ['id'=>$memo->id]) }}">編集</a>--}}
+   <a href="{{ route('edit', ['id'=>$memo->id]) }}">編集</a>
+   <a href="{{ route('delete', ['id'=>$memo->id]) }}">削除</a>
   </div>
   @endforeach
 
